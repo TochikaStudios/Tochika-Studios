@@ -32,7 +32,6 @@
 
 #aboutus {
   margin-top: 5rem;
-  height: 130vh;
   margin-bottom: 4rem;
 }
 
@@ -68,7 +67,7 @@
   transform: perspective(400px) rotate3d(var(--r,1,-1),0,calc(var(--i,1)*var(--a)));
   
   -webkit-mask: linear-gradient(135deg,#000c 40%,#000,#000c 100%) 100% 100% / 250% 250%;
-    
+  
   transition: .4s;
   cursor: pointer;
 }

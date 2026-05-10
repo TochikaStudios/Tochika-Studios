@@ -1,68 +1,88 @@
-/* Navbar */
+/* Nav bar */
 
 header {
     width: 100%;
     position: fixed;
     top: 0;
+    left: 0;
+    z-index: 1000;
 }
 
 #navbar {
-    padding: 1%;
+    padding: 1rem 2rem;
+
     display: flex;
-
-    align-items: last baseline;
+    align-items: center;
     justify-content: center;
-    gap: 4%;
+    gap: 4rem;
 
-    background-color: rgba(0, 0, 0, 0.8);
+    background: rgba(0, 0, 0, 0.82);
+    backdrop-filter: blur(2px);
 
+    transition: all 0.3s ease;
 }
 
-/* Navbar Itens */
-
 .navbar-item {
-  position: relative;
-  text-decoration: none;
-  color: rgb(255, 255, 255); 
-  padding-bottom: 5px; 
-  transition: color 0.3s ease; 
+    position: relative;
+
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+
+    padding-bottom: 6px;
+
+    transition:
+        color 0.3s ease,
+        transform 0.25s ease;
 }
 
 .navbar-item p {
-    font-size: larger;
+    font-size: 1.05rem;
+    font-weight: 500;
+    letter-spacing: 0.5px;
 }
 
 .navbar-item h1 {
-    font-size: x-large;
+    font-size: 1.6rem;
+    font-weight: 700;
 }
 
 .navbar-item::after {
-  content: "";
-  position: absolute;
-  bottom: 0;
-  left: 50%;
-  width: 0%; 
-  height: 2.75px;
-  background-color: white; 
-  transition: width 0.3s ease;
-  transform: translateX(-50%);
+    content: "";
+
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+
+    width: 0%;
+    height: 2.5px;
+
+    background: white;
+
+    border-radius: 50px;
+
+    transform: translateX(-50%);
+
+    transition: width 0.3s ease;
 }
 
+.navbar-item:hover::after,
 .navbar-item.active::after {
-  width: 100%; 
+    width: 100%;
 }
 
-.navbar-item:hover::after {
-  width: 100%; 
+.navbar-item:hover {
+    transform: translateY(-2px);
 }
 
 .navbar-item.active,
 .navbar-item:hover {
-  color: whitesmoke; 
+    color: whitesmoke;
 }
 
 
-/* Mobile Navbar */
+
+
+/* Mobile */
 
 #mobile_btn {
     display: none;
@@ -77,42 +97,107 @@ header {
 }
 
 @media screen and (max-width: 1000px) {
+
+    /* Navbar */
+
     #navbar {
         display: flex;
-        justify-content: space-evenly;
+        align-items: center;
+        justify-content: space-between;
+
+        padding: 0.85rem 1rem;
+
+        background: rgba(0, 0, 0, 0.82);
+        backdrop-filter: blur(2px);
+
+        position: fixed;
+        top: 0;
+        left: 0;
+
+        width: 100%;
+
+        z-index: 12;
     }
 
-    #navbar p, .navbar-item > h1 {
+    #navbar p {
         display: none;
     }
 
-    /* Mobile */
+    #navbar .navbar-item h1 {
+        display: none;
+    }
+
+    /* Mobile Button */
 
     #mobile_btn {
-        display: block;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        width: 36px;
+        height: 36px;
+
         border: none;
-        background-color: transparent;
-        font-size: 1.5rem;
+        border-radius: 10px;
+
+        background: transparent;
+
         color: white;
+
+        font-size: 1rem;
+
+        cursor: pointer;
     }
 
+    /* Mobile Menu */
+
     #mobile_menu.active {
+        position: fixed;
+
+        top: 62px;
+        right: 12px;
+
+        width: 180px;
+
         display: flex;
         flex-direction: column;
-        align-items: center;
-        background-color: rgba(0, 0, 0, 0.979);
-        padding: 12px;
-        gap: 50px;
-        margin-top: 6%;
-        border-radius: 20px;
-        border: 0.5em solid white;
+
+        gap: 4px;
+
+        padding: 8px;
+
+        border-radius: 14px;
+
+        background: rgba(12, 12, 12, 0.285);
+
+        z-index: 1000;
     }
+
+    /* Menu Items */
 
     .mobile-navbar-item {
         display: flex;
+        align-items: center;
+
+        padding: 10px 12px;
+
+        border-radius: 10px;
+
         text-decoration: none;
-        color: white;
-        font-size: small;
+
+        color: rgba(255, 255, 255, 0.9);
+
+        font-size: 0.9rem;
+        font-weight: 500;
+
+        transition: background 0.2s ease;
     }
 
+    .mobile-navbar-item:hover {
+        background: rgba(255, 255, 255, 0.06);
+    }
+
+    .mobile-navbar-item.active {
+        background: rgba(255, 255, 255, 0.08);
+    }
 }
