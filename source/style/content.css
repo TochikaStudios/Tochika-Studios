@@ -27,7 +27,6 @@
 
 #home {
   margin-top: 12%;
-  height: 50vh;
 }
 
 #aboutus {
@@ -116,18 +115,26 @@
 }
 
 @media screen and (max-width: 1000px) {
+  #home {
+    margin-top: 75%;
+  }
+  
   #content {
     padding-left: 2rem;
     padding-right: 2rem;
   }
 
+  .text p {
+    text-align: center;
+  }
+
   .content-wrapper {
     display: flex;
-    flex-direction: column; /* <-- empilha os elementos */
+    flex-direction: column; 
     align-items: center;
     justify-content: center;
     text-align: center;
-    gap: 2rem; /* espaço vertical entre texto e imagem */
+    gap: 2rem;
   }
 
   .text {

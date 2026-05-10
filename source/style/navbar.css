@@ -103,9 +103,11 @@ header {
     #navbar {
         display: flex;
         align-items: center;
-        justify-content: space-between;
+        justify-content: center;
+        
+        gap: 1.5rem;
 
-        padding: 0.85rem 1rem;
+        padding: 0.5rem 0.5rem;
 
         background: rgba(0, 0, 0, 0.82);
         backdrop-filter: blur(2px);
@@ -113,8 +115,6 @@ header {
         position: fixed;
         top: 0;
         left: 0;
-
-        width: 100%;
 
         z-index: 12;
     }
@@ -146,7 +146,7 @@ header {
 
         font-size: 1rem;
 
-        cursor: pointer;
+        cursor: auto;
     }
 
     /* Mobile Menu */
@@ -180,15 +180,15 @@ header {
         display: flex;
         align-items: center;
 
-        padding: 0.5rem 0.5rem;
-
         border-radius: 10px;
 
         text-decoration: none;
 
-        color: rgba(255, 255, 255, 0.9);
+        color: white;
 
-        font-size: 75%;
+        padding: 0.5rem 0.8rem;
+
+        font-size: 0.7rem;
         font-weight: 500;
 
         transition: background 0.2s ease;
@@ -196,9 +196,5 @@ header {
 
     .mobile-navbar-item:hover {
         background: rgba(255, 255, 255, 0.06);
-    }
-
-    .mobile-navbar-item.active {
-        background: rgba(255, 255, 255, 0.08);
     }
 }
