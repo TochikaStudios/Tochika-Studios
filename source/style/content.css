@@ -19,6 +19,8 @@
   align-items: flex-start;
   justify-content: space-between;
 
+  text-align: justify;
+
   gap: 12%;
   margin-bottom: 6%;
 }
@@ -41,6 +43,11 @@
   font-size: 150%;
 }
 
+#projects {
+  margin-top: 5rem;
+  margin-bottom: 4rem;
+}
+
 /* Things */
 
 .title {
@@ -48,15 +55,21 @@
   font-size: 2rem;
   color: white;
   margin-bottom: 6%;
+
+  font-weight: 550;
 }
 
 .text {
+  text-align: justify;
+  
   font-size: 1.2rem;
   color: white;
+  font-weight: 375;
 }
 
 .text i {
   color: rgb(184, 184, 184);
+  font-weight: 300;
 }
 .img {
   --a: 8deg; 
@@ -108,11 +121,116 @@
   box-shadow: 0 0 20px white;
 }
 
-/* Animação ao clicar */
+
 .btn:active {
   transform: scale(0.95);
   box-shadow: 0 0 10px white;
 }
+
+/* Projects */
+
+.projects-selector {
+  display: flex;
+  gap: 2.5rem;
+}
+
+.selector-side {
+  color: white;
+
+  background: rgba(6, 6, 6, 0.706);
+  backdrop-filter: blur(2px);
+
+  padding: 2rem;
+
+  border-radius: 12px;
+
+  border: 1px solid rgba(255, 255, 255, 0.5);
+
+  font-size: 1em;
+  font-weight: 300;
+
+  text-align: center;
+
+  transition: all 0.3s ease;
+
+  position: relative;
+  overflow: hidden;
+}
+
+.selector-side:hover {
+  border-color: white;
+
+  box-shadow:
+    0 0 10px rgba(255, 255, 255, 0.35),
+    0 0 25px rgba(255, 255, 255, 0.15);
+
+  transform: translateY(-2px);
+}
+
+/* brilho diagonal suave */
+.selector-side::before {
+  content: "";
+
+  position: absolute;
+
+  top: -60%;
+  left: -180%;
+
+  width: 70%;
+  height: 250%;
+
+  background: linear-gradient(
+    120deg,
+    transparent 0%,
+    rgba(255, 255, 255, 0.08) 30%,
+    rgba(255, 255, 255, 0.35) 50%,
+    rgba(255, 255, 255, 0.08) 70%,
+    transparent 100%
+  );
+
+  filter: blur(14px);
+
+  transform: rotate(25deg);
+
+  transition: left 1s ease;
+}
+
+.selector-side:hover::before {
+  left: 220%;
+}
+
+.projects-h2 {
+  color: white;
+
+  font-size: 2em;
+  font-weight: 400;
+
+  text-align: center;
+}
+
+.projects-p {
+  color: white;
+
+  font-size: 1.12em;
+  font-weight: 300d;
+
+  text-align: center;
+}
+
+.selector-image img {
+  width: 75%;
+}
+
+
+.games-list {
+  display: none;
+}
+
+.comics-list {
+  display: none;
+}
+
+/* Mobile */
 
 @media screen and (max-width: 1000px) {
   #home {
@@ -144,4 +262,11 @@
   .img {
     display: none;
   }
+
+  .projects-selector {
+    display: flex;
+    flex-direction: column;
+    gap: 2.5rem;
+  }
+
 }

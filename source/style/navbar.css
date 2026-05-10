@@ -12,7 +12,7 @@ header {
     padding: 1rem 2rem;
 
     display: flex;
-    align-items: center;
+    align-items: baseline;
     justify-content: center;
     gap: 4rem;
 
@@ -36,14 +36,14 @@ header {
 }
 
 .navbar-item p {
-    font-size: 1.05rem;
-    font-weight: 500;
+    font-size: 1.25rem;
+    font-weight: 400;
     letter-spacing: 0.5px;
 }
 
 .navbar-item h1 {
     font-size: 1.6rem;
-    font-weight: 700;
+    font-weight: 550;
 }
 
 .navbar-item::after {
@@ -101,11 +101,13 @@ header {
     /* Navbar */
 
     #navbar {
+        width: 100%;
+
         display: flex;
         align-items: center;
-        justify-content: center;
+        justify-content: space-between;
         
-        gap: 1.6rem;
+        gap: 1.5rem;
 
         padding: 0.5rem 0.5rem;
 
