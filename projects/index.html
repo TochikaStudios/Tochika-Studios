@@ -96,7 +96,7 @@
 
                 <!-- Selector -->
 
-                <div class="projects-selector">
+                <div id="projects-selector">
 
                     <!-- Games -->
                     <div class="selector-side">
@@ -105,15 +105,15 @@
                         
                         <!-- Image -->
                         <div class="selector-image">
-                            <p class="projects-p"><img src="../assets/preview.png" alt="Game Thumbnail"></p>
+                            <p class="projects-p"><img src="../assets/games.png" alt="Game Thumbnail"></p>
                         </div>
 
                         <!-- Description -->
                         <p class="projects-p"> Explore and discover amazing worlds and stories </p>
 
                         <!-- Button -->
-                        <button class="btn" id="open-games">
-                            Unavaible
+                        <button class="btn" id="open-games" onclick="show_projects('games')">
+                            Show Games
                         </button>
                     </div>
 
@@ -124,7 +124,7 @@
                         
                         <!-- Image -->
                         <div class="selector-image">
-                            <p class="projects-p"><img src="../assets/preview.png" alt="Comics Thumbnail"></p>
+                            <p class="projects-p"><img src="../assets/comics.png" alt="Comics Thumbnail"></p>
                         </div>
 
                         <!-- Description -->
@@ -132,18 +132,15 @@
 
                         <!-- Button -->
                         <button class="btn" id="open-comics">
-                            Unavaible
+                            Not Available
                         </button>
                     </div>
 
                 </div>
 
+                <!-- Games -->
 
-                <!-- ========================= -->
-                <!-- All Games -->
-                <!-- ========================= -->
-
-                <div class="games-list">
+                <div id="games-list">
 
                     <!-- Game Item -->
                     <article class="game-card">
@@ -156,66 +153,65 @@
                         <!-- Info -->
                         <div class="game-info">
                             <h2 class="game-title">
-                                Project Name
+                                Orange
                             </h2>
 
                             <p class="game-description">
-                                Small description about the game project. 
-                                Explain the concept, gameplay or story.
+                                At night, an orange child hears strange sounds
+                                coming from their neighbors. Their fear is so great that monsters emerge
+                                from it, and to discover the truth, the child will have to
+                                face them. By contrast, during the day, the child
+                                suffers at school, where the monsters are the people themselves.
                             </p>
                         </div>
 
                         <!-- Buttons -->
                         <div class="game-actions">
                             <button class="view-more">
-                                View More
+                                View More (Not Available Yet)
                             </button>
 
-                            <button class="store-page">
-                                Store Page
+                            <button class="store-page" onclick=" link_goto('https://store.steampowered.com/app/1083782/Orange/') ">
+                                Store Page (Not Available Yet)
                             </button>
                         </div>
 
                     </article>
 
 
-                    <!-- Another Game -->
+                    <!-- Itch Projects -->
                     <article class="game-card">
 
                         <div class="game-image">
-                            <img src="../assets/preview.png" alt="Game Thumbnail">
+                            <img src="../assets/itchprojects.png" alt="Game Thumbnail">
                         </div>
 
                         <div class="game-info">
-                            <h2 class="game-title">
-                                Another Project
-                            </h2>
+                            <h2 class="game-title"> ITCH.IO Projects </h2>
 
                             <p class="game-description">
-                                Another project description goes here.
+                                Tochika Studios projects published on Itch.io
                             </p>
                         </div>
 
                         <div class="game-actions">
-                            <button class="view-more">
-                                View More
-                            </button>
+                            
 
-                            <button class="store-page">
+                            <button class="store-page" onclick="link_goto('https://12guilhrm12.itch.io/')">
                                 Store Page
                             </button>
                         </div>
 
                     </article>
-
+                    
+                    <p style="text-align: center;">
+                        <button class="btn games" onclick="projects_reset()" style="width: 12%;"> Go Back </button>
+                    </p>
                 </div>
 
+                <!-- Comics -->
 
-                <!-- ========================= -->
-                <!-- All Comics -->
-                <!-- ========================= -->
-
-                <div class="comics-list">
+                <div id="comics-list">
 
                     <!-- Future comics content -->
 
