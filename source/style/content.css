@@ -540,7 +540,7 @@
 }
 
 .orange-hero-image img {
-  width: 24rem;
+  width: 40rem;
 
   border-radius: 24px;
 
@@ -615,7 +615,7 @@
   font-weight: 500;
 
   margin-top: 4rem;
-  margin-bottom: 2rem;
+  margin-bottom: 0.5rem;
 }
 
 .orange-gallery {
@@ -668,6 +668,10 @@
 .orange-info {
   display: flex;
   flex-direction: column;
+}
+
+.orange-p-agroup {
+  
 }
 
 .info-text {

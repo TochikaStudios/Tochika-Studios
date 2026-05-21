@@ -32,7 +32,7 @@ function show_projects(project) {
     }
 
     const url = new URL(window.location);
-    url.searchParams.set("project", project);
+    url.searchParams.set("o", project);
     window.history.replaceState({}, "", url);
 
 }
@@ -45,7 +45,7 @@ function projects_reset() {
     comic_page.style.display = "none";
 
     const url = new URL(window.location);
-    url.searchParams.delete("project");
+    url.searchParams.delete("o");
     window.history.replaceState({}, "", url);
 }
 
@@ -53,12 +53,15 @@ function link_goto(_url) {
     window.open(_url, "_blank");
 }
 
-/* abrir automaticamente */
+function link_switch(_url) {
+    window.location.href = _url;
+}
+
 window.addEventListener("load", () => {
 
   const params = new URLSearchParams(window.location.search);
 
-  const project = params.get("project");
+  const project = params.get("o");
 
   if (project === "games") {
     show_projects("games");
