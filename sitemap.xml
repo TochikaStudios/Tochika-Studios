@@ -20,7 +20,7 @@
   <!-- Projects -->
   <url>
     <loc>https://tochikastudios.com/projects</loc>
-    <lastmod>2026-05-20</lastmod>
+    <lastmod>2026-07-30</lastmod>
     <changefreq>monthly</changefreq>
     <priority>1.0</priority>
   </url>
@@ -28,9 +28,17 @@
   <!-- Project Orange -->
   <url>
     <loc>https://tochikastudios.com/projects/orange</loc>
-    <lastmod>2026-05-20</lastmod>
+    <lastmod>2026-07-30</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.9</priority>
-  </url>  
+    <priority>1.0</priority>
+  </url> 
+
+  <!-- Project Kitten's Fishes --> 
+  <url>
+    <loc>https://tochikastudios.com/projects/kittensfishes</loc>
+    <lastmod>2026-07-30</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>1.0</priority>
+  </url>
 
 </urlset>

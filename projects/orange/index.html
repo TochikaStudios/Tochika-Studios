@@ -144,13 +144,27 @@
 
                 <!-- Development Gallery -->
                 <div class="orange-p-agroup">
-                    <h2 class="orange-section-title"> Gallery </h2>
+                    <h2 class="orange-section-title">Gallery</h2>
 
                     <div class="orange-gallery">
 
-                        <img src="../../assets/screenshots1.png">
-                        <img src="../../assets/screenshots2.png">
-                        <img src="../../assets/screenshots3.png">
+                        <a href="../../assets/screenshots1.png"
+                        data-pswp-width="960"
+                        data-pswp-height="640">
+                            <img src="../../assets/screenshots1.png">
+                        </a>
+
+                        <a href="../../assets/screenshots2.png"
+                        data-pswp-width="960"
+                        data-pswp-height="640">
+                            <img src="../../assets/screenshots2.png">
+                        </a>
+
+                        <a href="../../assets/screenshots3.png"
+                        data-pswp-width="960"
+                        data-pswp-height="640">
+                            <img src="../../assets/screenshots3.png">
+                        </a>
 
                     </div>
                 </div>
@@ -272,7 +286,24 @@
 
         </main>
 
+        
+
         <!-- Scripts -->
+        <link rel="stylesheet"
+            href="https://cdn.jsdelivr.net/npm/photoswipe@5/dist/photoswipe.css"
+        >
+
+        <script type="module">
+        import PhotoSwipeLightbox from 'https://cdn.jsdelivr.net/npm/photoswipe@5/dist/photoswipe-lightbox.esm.min.js';
+
+        const lightbox = new PhotoSwipeLightbox({
+            gallery: '.orange-gallery',
+            children: 'a',
+            pswpModule: () => import('https://cdn.jsdelivr.net/npm/photoswipe@5/dist/photoswipe.esm.min.js')
+        });
+
+        lightbox.init();
+        </script>
         <script src="/source/scripts/script.js"></script>
         <script src="https://cdn.jsdelivr.net/npm/particles.js"></script>
         <script src="/source/scripts/particles.js"></script>
